@@ -33,7 +33,7 @@ O sistema oferece um menu interativo com as seguintes operações:
 
 ⋆ Estrutura do projeto
 
-sistema-biblioteca/
+sistema-biblioteca-dp/
 ├── main.py
 ├── cadastro.py
 ├── consulta.py

@@ -44,11 +44,11 @@ sistema-biblioteca/
 
 1. Clone o repositório:
 
-git clone https://github.com/USUARIO/sistema-biblioteca.git
+git clone https://github.com/lynriszi/sistema-biblioteca-dp
 
 2. Acesse a pasta do projeto:
 
-cd sistema-biblioteca
+cd sistema-biblioteca-dp
 
 3. Execute o programa:
 

@@ -1,49 +1,41 @@
-def listar_livros():
-    if len(livros) == 0:
-        print("Nenhum livro cadastrado!")
+livros = []
+
+def cadastrar_livro():
+    titulo = input("Digite o título do livro: ")
+
+    if titulo == "":
+        print("Título inválido!")
     else:
-        print("\n=== LIVROS CADASTRADOS ===")
+        livro = {
+            "codigo": len(livros) + 1,
+            "titulo": titulo
+        }
 
-        for livro in livros:
-            print("Código:", livro["codigo"])
-            print("Título:", livro["titulo"])
-            print("--------------------")
+        livros.append(livro)
+        print("Livro cadastrado!")
 
-def consultar_livro():
-    codigo = int(input("Digite o código do livro: "))
+opcao = -1
 
-    encontrado = False
-
-    for livro in livros:
-        if livro["codigo"] == codigo:
-            print("Livro encontrado!")
-            print("Título:", livro["titulo"])
-            encontrado = True
-
-    if encontrado == False:
-        print("Livro não encontrado!")
-
-while True:
+while opcao != 0:
     print("\n=== SISTEMA DE BIBLIOTECA ===")
     print("1 - Cadastrar livro")
     print("2 - Listar livros")
     print("3 - Consultar livro")
     print("0 - Sair")
 
-    opcao = input("Escolha uma opção: ")
+    opcao = int(input("Escolha uma opção: "))
 
-    if opcao == "1":
-        print("Cadastro de livros")
+    if opcao == 1:
+        cadastrar_livro()
 
-    elif opcao == "2":
-        print("Listagem de livros")
+    elif opcao == 2:
+        listar_livros()
 
-    elif opcao == "3":
-        print("Consulta de livros")
+    elif opcao == 3:
+        consultar_livro()
 
-    elif opcao == "0":
+    elif opcao == 0:
         print("Encerrando programa...")
-        break
 
     else:
         print("Opção inválida!")
